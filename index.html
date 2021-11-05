@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>VR</title>
+</head>
+
+<body>
+	<nav id="nav">
+		<a href="#" class="logo">
+			<img src="img\vr-logo-white.svg" alt="logo">
+		</a>
+		<div class="nav-desktop">
+			<ul>
+				<li><a href="#virtual-reality">Virtual Reality</a></li>
+				<li><a href="#training-of-surgeons">Træning af kirurger</a></li>
+				<li><a href="#pain-treament">Smertebehandling</a></li>
+				<li><a href="#spinal-injury">Genoptræning</a></li>
+				<li><a href="#ptsd">Terapi og PTSD</a></li>
+			</ul>
+		</div>
+		<div class="burger-btn" onclick="toogleMobileNav()" role=button> &#9776; </div>
+	</nav>
+
+	<nav class="nav-mobile">
+		<section class="section-flex">
+			<ul>
+				<li><a href="#virtual-reality">Virtual Reality</a></li>
+				<li><a href="#training-of-surgeons">Træning af kirurger</a></li>
+				<li><a href="#pain-treament">Smertebehandling</a></li>
+				<li><a href="#spinal-injury">Genoptræning</a></li>
+				<li><a href="#ptsd">Terapi og PTSD</a></li>
+			</ul>
+		</section>
+	</nav>
+	
+	<header>
+		<video autoplay muted loop id="myVideo">
+			<source src="vid/cover-vid.mp4" type="video/mp4">
+		</video>
+		<section class="header-content">
+			<h1>Virtual Reality i sundhedssektoren</h1>
+			<p>
+				Hent PDF'en nu og lær hvordan VR påvirker patiernters liv i sundhedssektoren.
+			</p>
+			<a href="#" class="btn-download-pdf" role="button">Hent PDF</a>
+		</section>
+	</header>
+	<main id="main">
+		<section class="wrapper">
+
+			<section id="virtual-reality" class="section-intro">
+				<section class="section-intro-content">
+					<img src="img\vr-grap.svg" class="img-vr-graphic" alt="Graphic obejct of VR">
+					<h2>Virtual Reality</h2>
+					<p style="max-width: 900px; width: 100%;">
+						Virtual Reality (VR) er brugen af computerteknologi der ved brug af VR Headset med en
+						stereoskopisk skærm det animerer billeder af et simuleret miljø.
+						Udover headset benyttes der en række enheder såsom bevægelsescontroller, handsker eller
+						kropsdragter, der med bevægelsessensorer opfanger brugerens bevægelser og justerer visningen
+						på skærmen i realtid.
+					</p>
+				</section>
+			</section>
+
+			<!-- SECTION 2 -->
+
+			<section id="training-of-surgeons" class="section-grid">
+				<img src="img/surgeon.jpg" alt="Picture of surgeons">
+				<section class="section-content-container">
+					<section class="section-content-text">
+						<h3>Træning af kirurger</h3>
+						<p>
+							Uddannelse for kirurger involverer eksperimentering på menneskers kroppe og en gradvis
+							proces
+							med hjælp fra erfarne læger, før de påtager sig andre mere komplekse operations opgaver.
+						</p>
+					</section>
+				</section>
+			</section>
+
+			<!-- SECTION 3 -->
+
+			<section id="pain-treament" class="section-grid">
+				<section class="section-content-container item-1">
+					<section class="section-content-text">
+						<h3>Smertebehandling</h3>
+						<p>
+							VR giver taktil og sensorisk feedback og giver patienten mulighed for at samle
+							neurotransmitter
+							mekanismerne der mindsker smerte hos patienten.
+						</p>
+					</section>
+				</section>
+				<img src="img/pain.jpg" class="item-2" alt="Picture of a smiling woman">
+			</section>
+
+			<!-- SECTION 4 -->
+
+			<section id="spinal-injury" class="section-grid">
+				<img src="img/wheelchair.jpg" alt="Picture of surgeons">
+				<section class="section-content-container">
+					<section class="section-content-text">
+						<h3>Genoptræning</h3>
+						<p>
+							VR kan give feedback om, hvor sikker patientens virtuelle adfærd er udført og
+							sandsynligheden
+							for succes i det faktiske miljø estimeres. Rehabiliterings terapier kunne så fokusere på at
+							forbedre eventuelle mangler og maksimering af patienternes sandsynlighed for succes i
+							hjemmet og samfundet.
+						</p>
+					</section>
+				</section>
+			</section>
+
+			<!-- SECTION 5 -->
+
+			<section id="ptsd" class="section-grid">
+				<section class="section-content-container item-1">
+					<section class="section-content-text">
+						<h3>Terapi og PTSD</h3>
+						<p>
+							Ligesom eksponeringsterapi, bliver VR brugt til at hjælpe soldater, der lider af PTSD. Mange
+							hospitaler og klinikker anvender virtual reality-simuleringer af krigsområder, 
+							for at hjælpe veteraner, der konstant genoplever de traumatiske
+							begivenheder.
+						</p>
+					</section>
+				</section>
+				<img src="img/ptsd.jpg" class="item-2" alt="Picture of a soldier wearing VR Headset">
+			</section>
+		</section>
+	</main>
+	<footer>
+		<section>
+			<h4>Fotos</h4>
+			<ul> 
+				<li>RODNAE Productions</li>
+				<li>Ivan Samkov</li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>Links</h4>
+			<ul>
+				<li><a href="https://www.news-medical.net/health/Applications-of-Virtual-Reality-in-Medicine.aspx">news-medical.net</a></li>
+				<li><a href="https://getreferralmd.com/2019/09/9-ways-to-use-virtual-reality-in-healthcare/">getreferralmd.com</a></li>
+				<li><a href="https://vilmate.com/blog/virtual-reality-in-healthcare/">vilmate.com</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>Elev</h4>
+			<ul>
+				<li>&copy; Charley Nordahn</li>
+				<li>08-11-2021</li>
+				<li>WebH121-1</li>
+			</ul>
+		</section>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
