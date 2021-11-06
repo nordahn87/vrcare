@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h4 {
@@ -228,8 +228,7 @@ header {
     color: #000;
     text-align: center;
     padding: 2rem;
-    background-color: #f4f4f2;
-    background-image: url("img/cover-desktop.png");
+    background-image: url("img/cover-desktop.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -238,12 +237,12 @@ header {
 
 @media only screen and (max-width: 900px) {
     .section-intro {
-        background-image: url("img/cover-mobile.png");
+        background-image: url("img/cover-mobile.jpg");
     }
 }
 
 .section-intro-content {
-    background-color: rgba(255, 255, 255, 0.856);
+    background-color: rgba(255, 255, 255, 0.884);
     padding: 1.2rem;
 }
 
