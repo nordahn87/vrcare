@@ -182,7 +182,7 @@ header {
     background-color: #00c3ff;
 }
 
-#myVideo {
+#bgvid{
     position: fixed;
     top: 0;
     min-width: 100%;
