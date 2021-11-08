@@ -20,13 +20,12 @@ window.addEventListener('resize', () => {
     }
 })
 
-let backgroundVideo = document.querySelector('#bgvid');
-let a = 0;
+// let backgroundVideo = document.querySelector('#bgvid');
+// let a = 0;
 
-backgroundVideo.onended = () => {
-    a = a + 1;
-    if (a != 3) {
-        backgroundVideo.play();
-    }
-};
-
+// backgroundVideo.onended = () => {
+//     a = a + 1;
+//     if (a != 3) {
+//         backgroundVideo.play();
+//     }
+// };

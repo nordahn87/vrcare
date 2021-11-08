@@ -27,11 +27,17 @@ img {
     width: 100%;
 }
 
+p, li {
+    font-weight: 300;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
 /* -------------------------------------GLOBAL HEADINGS AND PARAGRAPH------------------------------------- */
 
 h1, h2, h3 {
     letter-spacing: .1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -45,7 +51,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 h4 {
@@ -54,17 +60,7 @@ h4 {
     font-size: 1.5rem;
 }
 
-p {
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
 /* -------------------------------------NAVIGATION------------------------------------- */
-
-.logo {
-    width: 120px;
-}
 
 #nav {
     position: fixed;
@@ -78,16 +74,22 @@ p {
     overflow: hidden;
 }
 
+.logo {
+    width: 110px;
+    transition: .3s ease-in-out;
+}
+
 .nav-mobile {
-    display: block;
-    top: 100px;
-    position: fixed;
-    left: -100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.897);
-    transition: .2s;
-    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    top: -100%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.945);
+    transition: .2s;
 }
 
 .nav-mobile li+li {
@@ -95,12 +97,17 @@ p {
 }
 
 .nav-mobile.display {
-    left: 0;
+    top: 0;
     transition: .2s;
 }
 
 .scrolling-active {
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: #000000f1;
+    transition: .3s ease-in-out;
+}
+
+.scrolling-active .logo {
+    width: 100px;
     transition: .3s ease-in-out;
 }
 
@@ -168,11 +175,13 @@ header {
 }
 
 .btn-download-pdf {
+    display: block;
+    text-align: center;
     padding: 1rem 3rem;
     border-radius: 2rem;
     border: solid 2px #00c3ff;
     transition: 0.2s;
-    color: #fff;
+    color: #00c3ff;
     width: 200px;
     margin-top: 2rem;
 }
@@ -180,9 +189,10 @@ header {
 .btn-download-pdf:hover {
     transition: 0.2s;
     background-color: #00c3ff;
+    color: #fff;
 }
 
-#bgvid{
+#bgvid {
     position: fixed;
     top: 0;
     min-width: 100%;
@@ -222,15 +232,18 @@ header {
 
 .section-intro {
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #d8dad5;
     color: #000;
     text-align: center;
     padding: 2rem;
+    /* FIXED BACKGROUND IMAGE */
     background-image: url("img/cover-desktop.jpg");
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -252,13 +265,22 @@ header {
 }
 
 footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-wrapper {
     display: grid;
     grid-auto-flow: column;
     place-items: center;
     align-items: start;
-    background-color: #000;
-    padding: 2rem;
-    color: #fff;
+    padding: 2rem 0;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -275,7 +297,7 @@ footer {
     .item-2 {
         order: 1;
     }
-    footer {
+    .footer-wrapper {
         grid-auto-flow: row;
         grid-row-gap: 3rem;
         text-align: center;
