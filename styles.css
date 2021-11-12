@@ -89,8 +89,23 @@ h4 {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.945);
-    transition: .2s;
+    transition: .3s ease-in-out;
+    z-index: 998;
 }
+
+/* Ugly stupid css that I need to fix later */
+.nav-mobile .btn-download-pdf{
+    color: #00c3ff;
+}
+
+.nav-mobile .btn-download-pdf:hover{
+    color: #fff;
+}
+
+.nav-mobile .btn-download-pdf{
+    color: #00c3ff;
+}
+/* ------------------------------------------ */
 
 .nav-mobile li+li {
     margin-top: 1.5rem;
@@ -98,7 +113,7 @@ h4 {
 
 .nav-mobile.display {
     top: 0;
-    transition: .2s;
+    transition: .3s ease-in-out;
 }
 
 .scrolling-active {
@@ -135,22 +150,67 @@ footer a:hover, .nav-mobile a:hover, .nav-desktop a:hover {
     visibility: visible;
 }
 
-.burger-btn {
+.burger-btn-container, .burger-btn {
     display: none;
 }
 
 @media only screen and (max-width: 1050px) {
-    .burger-btn, .burger-btn:hover {
-        transition: 0.2s;
-    }
     .burger-btn {
         display: block;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
     }
-    .burger-btn:hover {
-        color: #00c3ff;
+
+    .burger-btn-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+
+    .burger-btn {
+        width: 20px;
+        height: 2px;
+        background-color: #00c3ff;
+        transition: .2s ease-in-out;
+    }
+
+    .burger-btn::before, .burger-btn::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #00c3ff;
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    .burger-btn::before {
+        transform: translateY(-8px);
+    }
+
+    .burger-btn::after {
+        transform: translateY(8px);
+    }
+    
+    /* =========== BURGER BTN ANIMATION ======== */
+    .burger-btn-container.open .burger-btn {
+        transform: translateX(-50px);
+        background: transparent;
+    }
+    .burger-btn-container.open .burger-btn::before {
+        transform: rotate(45deg) translate(35px, -35px);
+        background-color: #000;
+    }
+    .burger-btn-container.open .burger-btn::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+        background-color: #000;
+    }
+    .burger-btn-container.open {
+        background-color: #00c3ff;
+        border-radius: 50%;
     }
     .nav-desktop {
         display: none;
@@ -187,7 +247,7 @@ header {
 }
 
 .btn-download-pdf:hover {
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
     background-color: #00c3ff;
     color: #fff;
 }
@@ -265,6 +325,7 @@ header {
 }
 
 footer {
+    position: relative;
     background-color: #000;
     color: #fff;
 }
@@ -275,6 +336,50 @@ footer {
     place-items: center;
     align-items: start;
     padding: 2rem 0;
+}
+
+.up-arrow-alignment {
+    display: flex;
+    justify-content: center;
+}
+
+.imageBox {
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 0 0;
+    background-color: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.imageBox:hover .up-arrow-icon{
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+}
+
+.imageBox:hover:hover {
+    background-color: #00c3ff;
+}
+
+.imageBox:hover:hover {
+    background-color: #00c3ff;
+}
+
+.up-arrow-icon{
+    position: absolute;
+    top: 1.2rem;
+    border: solid #00c3ff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: 0.2s ease-in-out;
 }
 
 .copyright {

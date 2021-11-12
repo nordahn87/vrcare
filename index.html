@@ -10,9 +10,9 @@
 	<title>Virtual Reality i sundhedssektoren</title>
 </head>
 
-<body id="home">
+<body id="header">
 	<nav id="nav">
-		<a href="#home" class="logo">
+		<a href="#header" class="logo">
 			<img src="img/vr-logo-white.svg" alt="logo">
 		</a>
 		<div class="nav-desktop">
@@ -24,21 +24,23 @@
 				<li><a href="#ptsd">Terapi og PTSD</a></li>
 			</ul>
 		</div>
-		<div class="burger-btn" onclick="toggleMobileNav()" role=button> &#9776; </div>
+		<div class="burger-btn-container" onclick="toggleMobileNav()" role=button>
+			<div class="burger-btn"></div>
+		</div>
 	</nav>
 
 	<nav class="nav-mobile">
 		<section class="section-flex">
-			<ul>
+			<ul id="nav-mobile-links">
 				<li><a href="#virtual-reality">Virtual Reality</a></li>
 				<li><a href="#training-of-surgeons">Træning af kirurger</a></li>
-				<li><a href="#pain-treament">Smertebehandling</a></li>
+				<li>><a href="#pain-treament">Smertebehandling</a></li>
 				<li><a href="#spinal-injury">Genoptræning</a></li>
 				<li><a href="#ptsd">Terapi og PTSD</a></li>
 			</ul>
 			<br>
 			<br>
-			<a href="vr-charley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
+			<a href="virtual-reality-i-sundhedssektoren-af-chaley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
 		</section>
 	</nav>
 
@@ -51,7 +53,7 @@
 			<p>
 				Hent PDF'en nu og lær hvordan VR påvirker patiernters liv i sundhedssektoren.
 			</p>
-			<a href="vr-charley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
+			<a href="virtual-reality-i-sundhedssektoren-af-chaley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
 		</section>
 	</header>
 	<main id="main">
@@ -132,7 +134,7 @@
 							for at hjælpe veteraner, der konstant genoplever de traumatiske
 							begivenheder.
 						</p>
-						<a href="vr-charley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
+						<a href="virtual-reality-i-sundhedssektoren-af-chaley-nordahn.pdf" class="btn-download-pdf" role="button">Hent PDF</a>
 					</article>
 				</section>
 				<img src="img/ptsd.jpg" alt="Picture of a soldier wearing VR Headset">
@@ -140,6 +142,11 @@
 		</section>
 	</main>
 	<footer>
+		<div class="up-arrow-alignment">
+			<a href="#header" class="imageBox">
+				<div class="up-arrow-icon"></div>
+			</a>
+		</div>
 		<section class="footer-wrapper">
 			<section>
 				<h4>Fotografer</h4>
@@ -169,7 +176,6 @@
 			</ul>
 		</section>
 	</footer>
-	<script src="script.js"></script>
+		<script src="script.js"></script>
 </body>
-
 </html>
